@@ -1,12 +1,15 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Text, View,Dimensions} from 'react-native';
 import Post from './components/post';
 import Expo, {AppLoading, Font} from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { createStackNavigator } from 'react-navigation';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import HomeScreen from './features/home';
 import PostScreen from './features/post';
+
+let {height, width} = Dimensions.get('window');
 
 const Navigator = createStackNavigator({
     Home: {
@@ -52,14 +55,16 @@ export default class App extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+
+EStyleSheet.build({
+    $primaryColor: '#0275d8',
+    $rem: (width / 375) * 16
+});
+
+const styles = EStyleSheet.create({
     header: {
         paddingTop: Expo.Constants.statusBarHeight
     }
 });
+
+

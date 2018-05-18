@@ -2,6 +2,7 @@ import React from 'react';
 import {ActivityIndicator, FlatList, StyleSheet, Text, View} from 'react-native';
 import Post from './../../components/post';
 import Expo, {AppLoading, Font} from 'expo';
+import styles from './style';
 import {FontAwesome} from '@expo/vector-icons';
 
 export default class App extends React.Component {
@@ -69,12 +70,3 @@ export default class App extends React.Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-});

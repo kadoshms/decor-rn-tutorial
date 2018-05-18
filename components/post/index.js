@@ -17,13 +17,20 @@ const Post = (props) => {
 
     return (
         <TouchableWithoutFeedback onPress={() => onItemPressed(id)}>
-            <View>
-                <Text>{title}</Text>
-                <Text>{body}</Text>
-                <Image style={styles.pic} source={{ url: pic }} />
-                <TouchableOpacity onPress={() => onTrashPressed(id)}>
-                    <FontAwesome name="trash" size={25} />
-                </TouchableOpacity>
+            <View style={styles.wrapper}>
+                <View style={styles.cardWrapper}>
+                    <View style={styles.picWrapper}>
+                        <Image style={styles.pic} source={{ url: pic }} />
+                    </View>
+                    <View style={styles.textWrapper}>
+                        <Text style={styles.title}>{title.toUpperCase()}</Text>
+                        <Text style={styles.text}>{body}</Text>
+                        <TouchableOpacity onPress={() => onTrashPressed(id)} style={styles.button}>
+                            <FontAwesome name="trash" size={25} color={'#fff'} /><Text style={styles.buttonText}>DELETE</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
             </View>
         </TouchableWithoutFeedback>
     );
