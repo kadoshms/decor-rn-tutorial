@@ -42,21 +42,38 @@ export default EStyleSheet.create({
         color:'#555'
     },
 
+    // button:{
+    //     flex:1,
+    //     flexDirection:'row',
+    //     alignSelf: 'flex-start',
+    //     alignItems:'center',
+    //     marginVertical:10,
+    //     // borderColor: '$primaryColor',
+    //     // borderWidth:1,
+    //     padding:5,
+    //     borderRadius:4,
+    //     backgroundColor:'$primaryColor'
+    // },
+    // buttonText:{
+    //     color:'#fff',
+    //     marginStart:5
+    // },
     button:{
-        flex:1,
+        flex:0,
         flexDirection:'row',
         alignSelf: 'flex-start',
         alignItems:'center',
-        marginVertical:10,
+        marginVertical:'.6rem',
         // borderColor: '$primaryColor',
         // borderWidth:1,
-        padding:5,
+        padding:'.4rem',
         borderRadius:4,
-        backgroundColor:'$primaryColor'
+        backgroundColor:'$primaryColor',
+        alignSelf: 'flex-start'
     },
     buttonText:{
         color:'#fff',
-        marginStart:5
+        marginStart:'.3rem'
     },
 
 });
